@@ -31,7 +31,8 @@ export class CartComponent {
   readonly cartService = inject(CartService);
   readonly router = inject(Router);
   readonly contactService = inject(ContactService);
-  readonly unusedService = inject(UnusedService);
+  // removed this inject so the treeshaking during the build can remove the reference of this service.
+  // readonly unusedService = inject(UnusedService);
 
   readonly ROUTE_TOKENS = ROUTE_TOKENS;
 
